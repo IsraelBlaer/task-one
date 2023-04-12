@@ -2,6 +2,8 @@ import express from 'express'
 import config from 'config'
 import connect from './utils/db';
 import userRoute from './routes/user.routes';
+
+
 const app = express();
 const PORT = config.get<number>("port");
 

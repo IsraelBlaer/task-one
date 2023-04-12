@@ -4,7 +4,6 @@ export default {
     dbUri: "mongodb://127.0.0.1/task_db",
     saltFactor : 10,
     acessTokenTtl: "1h",
-   // refreeshTokenTtl:"1y",
     PrivateKey: `-----BEGIN RSA PRIVATE KEY-----
     MIIEoQIBAAKCAQBweeDtMHwvTX8Y9rpPk1+Dtya4VvuJPAzGVp+puMJ9CiynJmWE
     6/eJP8lNVqnVwDNp2j/5HvxRjNjSCdrODJ/zuxU9SsiIT4jSrYUFhh4NK607gY6u
