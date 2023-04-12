@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 
 
 const PrivateKey = config.get<string>("PrivateKey")
-const PublicKey = config.get<string>("PublicKey")
+//const PublicKey = config.get<string>("PublicKey")
   
 export function signJwt({_id,email}:{_id:mongoose.Types.ObjectId,email:string}){
    
