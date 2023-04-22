@@ -1,10 +1,9 @@
 import mongoose from "mongoose";
-import config from 'config'
 
 
 const connect =  async()=>{
-   mongoose.connect(config.get<string>("dbUri"))
-   .then(()=>{console.log("connected to mongoDb sucessfully")})
+   mongoose.connect(`mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@cluster0.4ysg0je.mongodb.net/${process.env.MONGO_DATABASE}`)
+   .then(()=>{console.log("connected to mongoDb Atlas successfully")})
    .catch((e:any)=>{console.error(e)});
 }
 
