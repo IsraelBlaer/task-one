@@ -3,7 +3,7 @@ import { IUser } from '../model/user.model';
 import { createUser } from '../service/user.service';
 import { validateUser } from '../service/user.service';
 import { signJwt } from '../../utils/jwt';
-import { sendWelcomeEmail } from '../../utils/email';
+import { sendWelcomeEmail } from '../../email/email';
 
 export async function createUserHandler(req: Request<{}, {}, IUser>, res: Response) {
     try {

@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { sendResetPasswordEmail } from "../../utils/email";
+import { sendResetPasswordEmail } from "../../email/email";
 import ResetPasswordModel, { IResetPassword } from "../model/resetPassword.model";
 import UserModel, { IUser } from "../model/user.model";
 import { generateCode } from "../../utils/generateCode";
@@ -25,7 +25,7 @@ export async function sendOTP(email: string) {
 
    try {
       ResetPasswordModel.create(resetPassword)
-
+       
       await sendResetPasswordEmail(otpCode, user.email, user.name)
 
       console.log("successfull")

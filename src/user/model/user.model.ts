@@ -5,9 +5,12 @@ import bcrypt from 'bcrypt'
 
 export interface IUser extends mongoose.Document {
   name: string,
+  
   password:string,
+
   email:string,
-  comparePassword(password:string):Promise<Boolean>
+
+ comparePassword(password:string):Promise<Boolean>
 }
 
 

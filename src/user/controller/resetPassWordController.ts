@@ -11,15 +11,15 @@ export async function resetPasswordHandler(req: Request, res: Response) {
         res.send('Password reset successfully');
     } catch (error: any) {
         if (error.message === 'not found') {
-            return errorHandler(res, error, 404, 'user not found');
+              errorHandler(res, error, 404, 'user not found');
         } else if (error.message === 'Invalid otp code') {
-            return errorHandler(res, error, 400, 'Invalid otp code provided');
+              errorHandler(res, error, 400, 'Invalid otp code provided');
         } else if (error.message === 'otp code expired') {
-            return errorHandler(res, error, 400, 'otp code expired');
+             errorHandler(res, error, 400, 'otp code expired');
         } else if (error.message === 'object Id') {
-            return errorHandler(res, error, 400, 'Invalid user ID provided');
+             errorHandler(res, error, 400, 'Invalid user ID provided');
         } else {
-            return errorHandler(res, error, 500, 'internal server error');
+             errorHandler(res, error, 500, 'internal server error');
         }
     }
 }

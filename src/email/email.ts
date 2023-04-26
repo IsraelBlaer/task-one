@@ -30,7 +30,7 @@ export async function sendWelcomeEmail(recievereMail:string, name:string){
       from:process.env.COMPANY_EMAIL ,
       to: recievereMail,
       subject: 'Welcome to our platform!',
-      text: `Dear ${name}, We are thrilled to welcome you to our platform! `,
+      text: `Dear ${name}, We are thrilled to have you on our platform! `,
     };
     try {
       transPort.sendMail(mailOptions)
