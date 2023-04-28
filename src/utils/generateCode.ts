@@ -1,8 +1,8 @@
-const codeArray:number[]  = []
 
-
+ 
 export function generateCode():number{
-    codeArray.length=0
+    const codeArray:number[]  = []
+     codeArray.length=0
     for(let i=1; i<=6; i++){
         const randomNumber =  Math.floor(Math.random()*10)
        // console.log(randomNumber,"\n")

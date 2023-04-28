@@ -1,7 +1,7 @@
 import express,{Router} from 'express'
 import { resetPasswordHandler, sendOTPHandler } from '../controller/resetPassWordController'
 import validateReq from '../../middleware/validateRequestBody'
-import resetPasswordSchema from '../schema/resetPassword.schema'
+import resetPasswordSchema from '../validators/resetPasswordValidator..schema'
 
 const resetPasswordRoute = Router()
 

@@ -1,5 +1,5 @@
 import express,{Router} from 'express'
-import userSchema,{userSignInSchema} from '../schema/user.schema'
+import userSchema,{userSignInSchema} from '../validators/userValidator.Schema'
 import { createUserHandler, loginUserHandler} from '../controller/createUserController'
 import validateReq from '../../middleware/validateRequestBody'
 

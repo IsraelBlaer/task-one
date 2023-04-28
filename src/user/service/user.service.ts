@@ -34,6 +34,15 @@ export async function validateUser({ email, password }: { email: string, passwor
   return newuser;
 }
 
+export async function fetchUserByEmail(email:string){
+
+  const user = await UserModel.findOne({ email: email })
+
+  if(!user) return true;
+
+  return false;
+}
+
 
 
   
